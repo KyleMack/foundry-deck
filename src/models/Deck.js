@@ -28,11 +28,10 @@ class Deck{
     setAuthor(author){ this.author = author; }
     setCards(cards){ this.cards = cards; }
 
+    //Returns the total number of cards
     getTotalCards(){ return this.cards.length(); }
-    
+
     //TODO: complete
-    //Gets a random card
-    getRandomCard(){ return false; }
 
     //Adds a card to the deck (Card Object)
     addCard(card){ return false; }
@@ -43,5 +42,10 @@ class Deck{
     removeCard(id){ return false; }
     //Remove a card based on name (Remove all matching cards if removeAll=true)
     removeCard(name, removeAll = false){ return false; }
+
+    //Randomizes the deck
+    shuffle(){ return false; }
+    //Removes the specified number of cards from the end of the deck and returns them
+    draw(count = 1){ return false; }
 
 }

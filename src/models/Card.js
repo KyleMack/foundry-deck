@@ -26,4 +26,6 @@ class Card{
     setName(name){ this.name = name; }
     setDescription(description){ this.description = description; }
 
+    enumerate(){ return `[${this.name}:${this.description}]`; }
+
 }

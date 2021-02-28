@@ -12,6 +12,11 @@ class Card{
         this.name = name;
         this.description = description;
     }
+    constructor(name, description) {
+        this.id = null;
+        this.name = name;
+        this.description = description;
+    }
 
     getId(){ return this.id; }
     getName(){ return this.name; }

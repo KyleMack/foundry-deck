@@ -30,22 +30,27 @@ class Deck{
 
     //Returns the total number of cards
     getTotalCards(){ return this.cards.length(); }
-
-    //TODO: complete
+    //Returns true if the deck is empty, false if not
+    isEmpty(){ return (this.cards.length() === 0); }
 
     //Adds a card to the deck (Card Object)
-    addCard(card){ return false; }
+    addCard(card){ this.cards.push(card); }
     //Adds a card to the deck (name & description)
-    addCard(name, description){ return false; }
+    addCard(name, description){ this.cards.push( new Card(name, description) ); }
 
     //Remove a card based on ID
-    removeCard(id){ return false; }
+    removeCardbyId(id){ this.cards.splice( this.cards.findIndex((card)=>{card.id == id}), 1 ); }
     //Remove a card based on name (Remove all matching cards if removeAll=true)
-    removeCard(name, removeAll = false){ return false; }
+    removeCardbyName(name){ this.cards.splice( this.cards.findIndex((card)=>{card.name == name}), 1 ); }
+    //Remove all cards with the same name
+    removeAllByName(name){ this.cards = this.cards.filter((card)=>{card.name != name}); }
 
+    //Removes one card from the deck and returns it
+    draw(){ return this.cards.pop(); }
+
+    //TODO:
     //Randomizes the deck
     shuffle(){ return false; }
-    //Removes the specified number of cards from the end of the deck and returns them
-    draw(count = 1){ return false; }
+
 
 }

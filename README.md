@@ -25,7 +25,7 @@ The Deck object represents a deck of playing cards.
 * Author
   * The author of the deck
 * Cards
- * The list of cards currently in the deck
+  * The list of cards currently in the deck
 
 The deck has the following methods:
 * draw(_count_)
@@ -37,7 +37,5 @@ The deck has the following methods:
 * addCard(_name, description_)
   * Creates a new card object and adds it to the bottom of the deck
 
-
-
-
 ### Board
+The Board objects represents one 'Hand' and one 'Deck' belonging to one player

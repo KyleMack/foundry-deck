@@ -1,6 +1,8 @@
 "use strict";
 
-class Deck{
+import {Card} from './Card.js';
+
+export class Deck{
 
     id = null;
     name = null;
@@ -29,9 +31,9 @@ class Deck{
     setCards(cards){ this.cards = cards; }
 
     //Returns the total number of cards
-    getTotalCards(){ return this.cards.length(); }
+    getTotalCards(){ return this.cards.length; }
     //Returns true if the deck is empty, false if not
-    isEmpty(){ return (this.cards.length() === 0); }
+    isEmpty(){ return (this.cards.length === 0); }
 
     //Adds a card to the deck (Card Object)
     addCard(card){ this.cards.push(card); }
@@ -62,7 +64,7 @@ class Deck{
     //See the below link for shuffling source:
     //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     _shuffle(){ 
-        let currIndex = this.cards.length(), tempValue, randIndex;
+        let currIndex = this.cards.length, tempValue, randIndex;
 
         //While there are still elements to shuffle...
         while(0 !== currIndex){
@@ -78,6 +80,6 @@ class Deck{
 
     }
 
-    enumerate(){ let out = ""; forEach((card)=>{out+=card.enumerate();}) }
+    enumerate(){ let out = ""; for(let i=0;i<this.cards.length;i++){out+=(this.cards[i].enumerate() + '\n');}return out; }
 
 }

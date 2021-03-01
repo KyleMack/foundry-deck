@@ -1,7 +1,7 @@
 "use scrict";
 
 /* Class for containing Card Data*/
-class Card{
+export class Card{
 
     id = null;
     name = null;
@@ -9,11 +9,6 @@ class Card{
 
     constructor(id = null, name = null, description = null){
         this.id = id;
-        this.name = name;
-        this.description = description;
-    }
-    constructor(name, description) {
-        this.id = null;
         this.name = name;
         this.description = description;
     }
@@ -26,6 +21,6 @@ class Card{
     setName(name){ this.name = name; }
     setDescription(description){ this.description = description; }
 
-    enumerate(){ return `[${this.name}:${this.description}]`; }
+    enumerate(){ return `[${this.name}: ${this.description}]`; }
 
 }

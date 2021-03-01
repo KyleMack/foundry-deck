@@ -1,0 +1,32 @@
+{
+    "deckName": "Tarot Deck",
+    "description": "Standard Tarot Deck",
+    "author": "Kyle",
+    "cards": [
+        {
+            "id":"01",
+            "name":"The Fool",
+            "description":"The card of beginnings"
+        },
+        {
+            "id":"02",
+            "name":"The Magician",
+            "description":"The card of will"
+        },
+        {
+            "id":"03",
+            "name":"Death",
+            "description":"The card of a new cycle"
+        },
+        {
+            "id":"04",
+            "name":"The Fool",
+            "description":"The card of beginnings"
+        },
+        {
+            "id":"05",
+            "name":"The Tower",
+            "description":"The card of ruin"
+        }
+    ]
+}
